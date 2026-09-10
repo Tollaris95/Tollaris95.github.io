@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nicolas M'Bark</title>
-<meta name="description" content="Nicolas M'Bark — développeur senior fullstack TypeScript. Serveur MCP, extension Chrome publiée sur le Chrome Web Store, pipeline de conversion audio, mission freelance.">
+<meta name="description" content="Nicolas M'Bark — développeur senior fullstack TypeScript. Plateforme SaaS front Next.js et API Node.js, extension Chrome publiée, pipeline de transcription audio, serveur MCP.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,500;0,8..30,600;0,8..30,700;1,8..30,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -91,7 +91,7 @@
     margin: 0 0 14px;
   }
   h1.name { font-size: clamp(34px, 5vw, 48px); font-weight: 600; letter-spacing: -0.01em; }
-  .role { font-size: 18px; color: var(--ink-soft); margin: 10px 0 22px; max-width: 54ch; }
+  .role { font-size: 18px; color: var(--ink-soft); margin: 10px 0 22px; max-width: 56ch; }
   .contact-row { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; }
   .contact-row a { color: var(--ink-soft); }
   .contact-row a:hover { color: var(--amber); }
@@ -118,11 +118,19 @@
   .case { padding-bottom: 8px; }
   .case-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
   .case h2 { font-size: 25px; font-weight: 600; }
+  .case h3 {
+    font-family: 'Piazzolla', Georgia, serif;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--ink);
+    margin: 32px 0 6px;
+    padding-top: 4px;
+  }
   .case .years { font-family: 'IBM Plex Mono', monospace; font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
   .case .dek { color: var(--pine-strong); font-size: 15px; margin: 8px 0 16px; font-weight: 500; }
   .case p.body-text { color: var(--ink-soft); max-width: 64ch; font-size: 15.5px; }
 
-  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 16px 0 24px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 7px; margin: 14px 0 6px; }
   .tag {
     font-family: 'IBM Plex Mono', monospace;
     font-size: 12px;
@@ -134,7 +142,7 @@
   }
 
   figure.diagram {
-    margin: 0 0 6px;
+    margin: 14px 0 6px;
     padding: 20px 20px 14px;
     background: var(--surface);
     border: 1px solid var(--rule);
@@ -151,7 +159,7 @@
     border-top: 1px solid var(--rule);
   }
 
-  .metric-strip { display: flex; gap: 28px; flex-wrap: wrap; margin: 18px 0 26px; }
+  .metric-strip { display: flex; gap: 28px; flex-wrap: wrap; margin: 16px 0 8px; }
   .metric { font-family: 'IBM Plex Mono', monospace; }
   .metric .n { display: block; font-size: 20px; color: var(--pine-strong); font-weight: 500; }
   .metric .l { display: block; font-size: 11.5px; color: var(--ink-soft); margin-top: 2px; }
@@ -159,7 +167,7 @@
   /* ---------- other explorations ---------- */
   .explorations { margin-top: 8px; }
   .explorations h2 { font-size: 20px; margin-bottom: 6px; }
-  .explorations > p.body-text { margin-top: 0; margin-bottom: 20px; }
+  .explorations > p.body-text { margin-top: 0; margin-bottom: 20px; color: var(--ink-soft); font-size: 15px; max-width: 64ch; }
   .expl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 14px; }
   .expl-card {
     background: var(--surface);
@@ -167,7 +175,7 @@
     border-radius: 6px;
     padding: 16px 16px 14px;
   }
-  .expl-card h3 { font-size: 15.5px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; }
+  .expl-card h3 { font-size: 15.5px; font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; margin: 0; }
   .expl-card p { font-size: 13.5px; color: var(--ink-soft); margin: 6px 0 10px; }
   .expl-card .tags { margin: 0; gap: 5px; }
   .expl-card .tag { font-size: 10.5px; padding: 3px 7px; }
@@ -203,7 +211,7 @@
   <header class="hero">
     <p class="eyebrow">Portfolio &middot; sept. 2026</p>
     <h1 class="name">Nicolas M'Bark</h1>
-    <p class="role">Développeur senior fullstack TypeScript &mdash; sept ans à concevoir, livrer et exploiter des produits de bout en bout, du serveur MCP exposé à des agents IA jusqu'à l'extension de navigateur publiée sur le Chrome Web Store.</p>
+    <p class="role">Développeur senior fullstack TypeScript &mdash; sept ans à concevoir, développer et exploiter une plateforme SaaS de bout en bout, front Next.js, API Node.js et infrastructure, en autonomie et en binôme avec un profil design/UX.</p>
     <div class="contact-row">
       <a href="mailto:mbark.nicolas@gmail.com">mbark.nicolas@gmail.com</a>
       <a href="https://github.com/Tollaris95">github.com/Tollaris95</a>
@@ -212,14 +220,14 @@
     </div>
   </header>
 
-  <section class="intro wrap-inner">
+  <section class="intro">
     <svg class="staff" viewBox="0 0 704 30" role="presentation" aria-hidden="true">
       <line x1="0" y1="5" x2="704" y2="5" stroke="currentColor" stroke-width="1"/>
       <line x1="0" y1="12" x2="704" y2="12" stroke="currentColor" stroke-width="1"/>
       <line x1="0" y1="19" x2="704" y2="19" stroke="currentColor" stroke-width="1"/>
       <line x1="0" y1="26" x2="704" y2="26" stroke="currentColor" stroke-width="1"/>
     </svg>
-    <p>Co-fondateur de La Touche Musicale, éditeur SaaS d'apprentissage musical et de traitement audio par IA, où je conçois les produits en binôme avec un profil design/UX, du cadrage avec les utilisateurs jusqu'à l'exploitation en production. Quatre réalisations choisies ci-dessous, chacune montre une décision d'architecture plutôt qu'une liste de technologies.</p>
+    <p>Ci-dessous, le logiciel que je fais tourner en production. D'abord la plateforme La Touche Musicale dans son ensemble, son front, son API, ses traitements et son exploitation, puis les briques et chantiers plus ciblés autour. Chaque bloc décrit ce que le code fait, pas seulement les technologies employées.</p>
   </section>
 
   <section class="exp">
@@ -248,22 +256,74 @@
     </ul>
   </section>
 
-  <!-- ============ OP. 1 — MCP SERVER ============ -->
+  <!-- ============ PLATEFORME LA TOUCHE MUSICALE ============ -->
   <svg class="staff" viewBox="0 0 704 30" role="presentation" aria-hidden="true">
     <line x1="0" y1="5" x2="704" y2="5" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="12" x2="704" y2="12" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="19" x2="704" y2="19" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="26" x2="704" y2="26" stroke="currentColor" stroke-width="1"/>
-    <text x="704" y="21" text-anchor="end" class="opus" font-size="12">Op. 1</text>
   </svg>
 
   <article class="case">
     <div class="case-head">
-      <h2>Serveur MCP</h2>
-      <span class="years mono">2026</span>
+      <h2>Plateforme La Touche Musicale</h2>
+      <span class="years mono">2019 – présent</span>
     </div>
-    <p class="dek">Exposer des données de production à des agents IA sans leur donner les clés du système.</p>
-    <p class="body-text">Un serveur Model Context Protocol qui donne à des agents IA un accès contrôlé à GA4, Stripe, MongoDB et BigQuery. Le vrai sujet n'est pas la donnée exposée mais la porte entre l'agent et le système&nbsp;: authentification OAuth2/OIDC via Keycloak, jetons JWT/JWKS de courte durée, et dix scopes qui déterminent précisément ce qu'un agent peut lire ou écrire, par outil et par rôle.</p>
+    <p class="dek">Un SaaS d'apprentissage du piano et de transcription audio, du front à l'API jusqu'à l'infra, que je porte depuis la première ligne de code.</p>
+    <p class="body-text">Six applications en production autour d'un même produit&nbsp;: la webapp d'apprentissage, l'application mobile, deux plateformes de transcription audio par IA, un serveur MCP. Je conçois les fonctionnalités en binôme avec un profil design/UX, je les développe des deux côtés de la stack, et j'exploite l'ensemble.</p>
+
+    <div class="metric-strip">
+      <div class="metric"><span class="n">6</span><span class="l">applis en production</span></div>
+      <div class="metric"><span class="n">7 ans</span><span class="l">en exploitation continue</span></div>
+      <div class="metric"><span class="n">99,9 %</span><span class="l">uptime</span></div>
+    </div>
+
+    <h3>Front web &mdash; Next.js / React</h3>
+    <p class="body-text">Application Next.js (App Router) pour l'apprentissage du piano&nbsp;: rendu de partition et clavier interactif, jeu de progression, catalogue de morceaux éditorialisable depuis un back-office admin, conversion PianoConvert intégrée directement dans le navigateur, tunnel d'abonnement Stripe. État géré avec Redux Toolkit et TanStack Query, composants MUI, textes multilingues pilotés par un CMS, écrans intégrés à partir de maquettes Figma.</p>
+    <div class="tags">
+      <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript strict</span>
+      <span class="tag">Redux Toolkit</span><span class="tag">TanStack Query</span><span class="tag">MUI</span><span class="tag">i18n via CMS</span>
+    </div>
+
+    <h3>API &mdash; Sails.js / MongoDB</h3>
+    <p class="body-text">API REST Sails.js sur MongoDB&nbsp;: modélisation, indexation et agrégations, authentification OAuth2/OIDC via Keycloak avec un secret JWT propre à ce backend, tâches de fond BullMQ/Redis, webhooks Stripe, stockage S3. Environ 1&nbsp;450 cas de test sur l'API et le front (Jest, Supertest, Testing Library)&nbsp;; lint et audit de dépendances bloquants avant tout déploiement.</p>
+    <div class="tags">
+      <span class="tag">Sails.js</span><span class="tag">Node.js &ge; 24</span><span class="tag">MongoDB / Mongoose</span>
+      <span class="tag">OAuth2 / OIDC &middot; Keycloak</span><span class="tag">BullMQ / Redis</span><span class="tag">Stripe webhooks</span><span class="tag">Jest &middot; Supertest</span>
+    </div>
+
+    <h3>Pipeline de transcription audio &rarr; partition</h3>
+    <p class="body-text">Le traitement audio (Essentia, MuseScore) est trop lourd pour vivre dans le cycle requête/réponse de l'API. Je l'ai sorti vers des workers BullMQ/Redis concurrents, avec une clé d'idempotence par conversion pour ne jamais traiter deux fois le même fichier, des transitions d'état conditionnelles, et une file priorisée qui laisse les conversions courtes doubler les longues.</p>
+
+    <figure class="diagram">
+      <svg viewBox="0 0 660 190" fill="currentColor" role="img" aria-label="Une requête de conversion passe de l'API à une file d'attente Redis avec clé d'idempotence, puis à des workers BullMQ concurrents qui appellent les modules Python Essentia et MuseScore. En cas d'échec, la tâche revient dans la file pour une reprise plutôt que d'être perdue.">
+        <defs>
+          <marker id="pc-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+            <path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/>
+          </marker>
+        </defs>
+        <rect x="10" y="76" width="96" height="40" rx="4" fill="none" stroke="currentColor"/>
+        <text x="58" y="100" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">API</text>
+        <line x1="106" y1="96" x2="176" y2="96" stroke="currentColor" marker-end="url(#pc-arrow)"/>
+        <rect x="180" y="54" width="168" height="84" rx="4" fill="none" stroke="var(--amber)" stroke-width="1.4"/>
+        <text x="264" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="var(--amber)">File Redis</text>
+        <text x="264" y="103" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--amber)">clé d'idempotence</text>
+        <text x="264" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--amber)">priorité courtes &gt; longues</text>
+        <line x1="348" y1="96" x2="418" y2="96" stroke="currentColor" marker-end="url(#pc-arrow)"/>
+        <rect x="422" y="30" width="228" height="42" rx="4" fill="none" stroke="currentColor"/>
+        <text x="536" y="55" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">Worker BullMQ #1 &rarr; Essentia</text>
+        <rect x="422" y="80" width="228" height="42" rx="4" fill="none" stroke="currentColor"/>
+        <text x="536" y="105" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">Worker BullMQ #2 &rarr; MuseScore</text>
+        <rect x="422" y="130" width="228" height="42" rx="4" fill="none" stroke="currentColor" opacity="0.5"/>
+        <text x="536" y="155" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" opacity="0.6">Worker BullMQ #n (concurrents)</text>
+        <path d="M422,51 C 390,51 390,150 190,148" fill="none" stroke="currentColor" stroke-dasharray="3,3" marker-end="url(#pc-arrow)"/>
+        <text x="300" y="172" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.7">échec &rarr; reprise en file</text>
+      </svg>
+      <figcaption>Plus de 300&nbsp;000 conversions traitées, environ 21&nbsp;000 par mois, sans perte sur échec grâce à la clé d'idempotence et à la reprise en file.</figcaption>
+    </figure>
+
+    <h3>Exposer la plateforme à des agents IA</h3>
+    <p class="body-text">Un serveur Model Context Protocol donne à des agents IA un accès contrôlé à GA4, Stripe, MongoDB et BigQuery. Le sujet n'est pas la donnée exposée mais la porte&nbsp;: OAuth2/OIDC, jetons JWT/JWKS de courte durée, et dix scopes qui déterminent ce qu'un agent peut lire ou écrire, par outil et par rôle.</p>
 
     <figure class="diagram">
       <svg viewBox="0 0 660 220" fill="currentColor" role="img" aria-label="Un agent IA envoie une requête avec un jeton JWT et un scope au serveur MCP. Le serveur vérifie le scope contre un modèle de permissions par rôle avant d'autoriser l'accès à l'un des quatre systèmes connectés, GA4, Stripe, MongoDB ou BigQuery. Une requête hors scope est rejetée avant d'atteindre les systèmes.">
@@ -272,61 +332,50 @@
             <path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/>
           </marker>
         </defs>
-
-        <!-- Agent -->
         <rect x="14" y="86" width="120" height="48" rx="4" fill="none" stroke="currentColor"/>
         <text x="74" y="115" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13">Agent IA</text>
-
-        <!-- arrow to gate -->
         <line x1="134" y1="110" x2="222" y2="110" stroke="currentColor" marker-end="url(#mcp-arrow)"/>
         <text x="178" y="100" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5">JWT + scope</text>
-
-        <!-- gate -->
         <rect x="226" y="70" width="150" height="80" rx="4" fill="none" stroke="var(--amber)" stroke-width="1.6"/>
         <text x="301" y="100" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--amber)">OAuth2/OIDC</text>
         <text x="301" y="118" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="12" fill="var(--amber)">10 scopes / rôle</text>
         <text x="301" y="136" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="currentColor" opacity="0.65">Serveur MCP</text>
-
-        <!-- rejected path -->
         <line x1="301" y1="150" x2="301" y2="182" stroke="currentColor" stroke-dasharray="3,3" marker-end="url(#mcp-arrow)"/>
-        <text x="301" y="198" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.7">hors scope → rejet</text>
-
-        <!-- fan out to 4 systems -->
+        <text x="301" y="198" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.7">hors scope &rarr; rejet</text>
         <line x1="376" y1="90" x2="470" y2="30" stroke="currentColor" marker-end="url(#mcp-arrow)"/>
         <line x1="376" y1="103" x2="470" y2="75" stroke="currentColor" marker-end="url(#mcp-arrow)"/>
         <line x1="376" y1="117" x2="470" y2="145" stroke="currentColor" marker-end="url(#mcp-arrow)"/>
         <line x1="376" y1="130" x2="470" y2="190" stroke="currentColor" marker-end="url(#mcp-arrow)"/>
-
         <g font-family="IBM Plex Mono, monospace" font-size="12">
           <rect x="474" y="10" width="172" height="34" rx="3" fill="none" stroke="currentColor"/>
-          <text x="560" y="31" text-anchor="middle">GA4 · lecture</text>
-
+          <text x="560" y="31" text-anchor="middle">GA4 &middot; lecture</text>
           <rect x="474" y="58" width="172" height="34" rx="3" fill="none" stroke="currentColor"/>
-          <text x="560" y="79" text-anchor="middle">Stripe · lecture</text>
-
+          <text x="560" y="79" text-anchor="middle">Stripe &middot; lecture</text>
           <rect x="474" y="128" width="172" height="34" rx="3" fill="none" stroke="currentColor"/>
-          <text x="560" y="149" text-anchor="middle">MongoDB · scope</text>
-
+          <text x="560" y="149" text-anchor="middle">MongoDB &middot; scope</text>
           <rect x="474" y="173" width="172" height="34" rx="3" fill="none" stroke="currentColor"/>
-          <text x="560" y="194" text-anchor="middle">BigQuery · scope</text>
+          <text x="560" y="194" text-anchor="middle">BigQuery &middot; scope</text>
         </g>
       </svg>
       <figcaption>Le jeton porte le scope&nbsp;; le serveur vérifie chaque appel avant d'atteindre un système connecté. Une requête hors scope n'accède à rien.</figcaption>
     </figure>
-
     <div class="tags">
-      <span class="tag">TypeScript</span><span class="tag">Model Context Protocol</span><span class="tag">Keycloak</span>
-      <span class="tag">JWT / JWKS</span><span class="tag">RBAC</span><span class="tag">BigQuery</span><span class="tag">Stripe API</span>
+      <span class="tag">Model Context Protocol</span><span class="tag">JWT / JWKS</span><span class="tag">RBAC</span><span class="tag">BigQuery</span>
+    </div>
+
+    <h3>Exploitation</h3>
+    <p class="body-text">Scaleway bare-metal, Docker, PM2 en cluster, Nginx, CI/CD Azure DevOps. 99,9&nbsp;% d'uptime, déploiements zéro-downtime, et migration de l'ensemble de la codebase de JavaScript vers TypeScript sans interruption de service.</p>
+    <div class="tags">
+      <span class="tag">Scaleway bare-metal</span><span class="tag">Docker</span><span class="tag">PM2 cluster</span><span class="tag">Nginx</span><span class="tag">Azure DevOps CI/CD</span>
     </div>
   </article>
 
-  <!-- ============ OP. 2 — CHROME EXTENSION ============ -->
+  <!-- ============ EXTENSION CHROME ============ -->
   <svg class="staff" viewBox="0 0 704 30" role="presentation" aria-hidden="true">
     <line x1="0" y1="5" x2="704" y2="5" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="12" x2="704" y2="12" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="19" x2="704" y2="19" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="26" x2="704" y2="26" stroke="currentColor" stroke-width="1"/>
-    <text x="704" y="21" text-anchor="end" class="opus" font-size="12">Op. 2</text>
   </svg>
 
   <article class="case">
@@ -335,7 +384,7 @@
       <span class="years mono">2024 – 2026</span>
     </div>
     <p class="dek">Convertir une vidéo YouTube en partition, sans quitter la page YouTube.</p>
-    <p class="body-text">Extension Manifest V3 publiée sur le Chrome Web Store, construite avec Plasmo. Un script injecté dans la page YouTube ne peut ni appeler l'API ni gérer l'authentification directement&nbsp;: tout passe par un service worker en arrière-plan, relié par passage de messages, qui porte l'OAuth2 via <code class="mono" style="font-size:13px">chrome.identity</code>, l'upload direct vers S3 et le suivi de conversion en temps réel par WebSocket.</p>
+    <p class="body-text">Extension Manifest V3 publiée sur le Chrome Web Store, construite avec Plasmo, environ 10&nbsp;700 lignes de TypeScript. Un script injecté dans la page YouTube ne peut ni appeler l'API ni gérer l'authentification directement&nbsp;: tout passe par un service worker en arrière-plan, relié par passage de messages, qui porte l'OAuth2 via <code class="mono" style="font-size:13px">chrome.identity</code>, l'upload direct vers S3 et le suivi de conversion en temps réel par WebSocket. Un module de détection analyse le contenu de la vidéo pour suggérer l'instrument à transcrire.</p>
 
     <figure class="diagram">
       <svg viewBox="0 0 660 200" fill="currentColor" role="img" aria-label="Sur la page YouTube, un script de contenu injecte l'interface mais ne peut pas accéder directement au réseau. Il envoie un message au service worker en arrière-plan, qui gère l'authentification OAuth2, l'upload S3 et une connexion WebSocket pour le suivi en temps réel de la conversion.">
@@ -344,37 +393,26 @@
             <path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/>
           </marker>
         </defs>
-
-        <!-- youtube tab -->
         <rect x="10" y="14" width="230" height="172" rx="6" fill="none" stroke="currentColor" stroke-width="1.2"/>
         <text x="26" y="34" font-family="IBM Plex Mono, monospace" font-size="10.5" opacity="0.7">onglet youtube.com</text>
         <rect x="26" y="48" width="198" height="112" rx="4" fill="none" stroke="currentColor" opacity="0.35"/>
         <text x="125" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">vidéo</text>
         <rect x="46" y="106" width="158" height="38" rx="4" fill="none" stroke="var(--amber)" stroke-width="1.4"/>
         <text x="125" y="130" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10.5" fill="var(--amber)">UI injectée (content script)</text>
-
-        <!-- message passing arrow -->
         <line x1="240" y1="100" x2="320" y2="100" stroke="currentColor" marker-end="url(#ext-arrow)"/>
         <text x="280" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10">chrome.runtime</text>
         <text x="280" y="115" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10">message</text>
-
-        <!-- background worker -->
         <rect x="324" y="60" width="150" height="80" rx="4" fill="none" stroke="currentColor" stroke-width="1.4"/>
         <text x="399" y="90" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5">Service worker</text>
         <text x="399" y="106" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.7">arrière-plan</text>
-
-        <!-- fan out -->
         <line x1="474" y1="72" x2="546" y2="30" stroke="currentColor" marker-end="url(#ext-arrow)"/>
         <line x1="474" y1="100" x2="546" y2="100" stroke="currentColor" marker-end="url(#ext-arrow)"/>
         <line x1="474" y1="128" x2="546" y2="170" stroke="currentColor" marker-end="url(#ext-arrow)"/>
-
         <g font-family="IBM Plex Mono, monospace" font-size="10.5">
           <rect x="550" y="12" width="100" height="34" rx="3" fill="none" stroke="currentColor"/>
           <text x="600" y="33" text-anchor="middle">chrome.identity</text>
-
           <rect x="550" y="83" width="100" height="34" rx="3" fill="none" stroke="currentColor"/>
           <text x="600" y="104" text-anchor="middle">S3 upload</text>
-
           <rect x="550" y="153" width="100" height="34" rx="3" fill="none" stroke="currentColor"/>
           <text x="600" y="174" text-anchor="middle">WebSocket</text>
         </g>
@@ -388,75 +426,12 @@
     </div>
   </article>
 
-  <!-- ============ OP. 3 — PIANOCONVERT PIPELINE ============ -->
+  <!-- ============ MISSION FREELANCE ============ -->
   <svg class="staff" viewBox="0 0 704 30" role="presentation" aria-hidden="true">
     <line x1="0" y1="5" x2="704" y2="5" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="12" x2="704" y2="12" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="19" x2="704" y2="19" stroke="currentColor" stroke-width="1"/>
     <line x1="0" y1="26" x2="704" y2="26" stroke="currentColor" stroke-width="1"/>
-    <text x="704" y="21" text-anchor="end" class="opus" font-size="12">Op. 3</text>
-  </svg>
-
-  <article class="case">
-    <div class="case-head">
-      <h2>Pipeline PianoConvert &amp; GalaxyConvert</h2>
-      <span class="years mono">2023 – 2026</span>
-    </div>
-    <p class="dek">Sortir la conversion audio → partition du serveur web avant qu'elle ne le mette à genoux.</p>
-    <p class="body-text">Le traitement audio (Essentia, MuseScore) est trop lourd pour vivre dans le cycle requête/réponse d'une API. Je l'ai extrait vers des workers BullMQ/Redis concurrents, avec une clé d'idempotence par conversion pour ne jamais traiter deux fois le même fichier, des transitions d'état conditionnelles, et une file priorisée qui laisse les conversions courtes doubler les longues plutôt que d'attendre en ligne.</p>
-
-    <figure class="diagram">
-      <svg viewBox="0 0 660 190" fill="currentColor" role="img" aria-label="Une requête de conversion passe de l'API à une file d'attente Redis avec clé d'idempotence, puis à des workers BullMQ concurrents qui appellent les modules Python Essentia et MuseScore. En cas d'échec, la tâche revient dans la file pour une reprise plutôt que d'être perdue.">
-        <defs>
-          <marker id="pc-arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
-            <path d="M0,0 L6,3 L0,6 Z" fill="currentColor"/>
-          </marker>
-        </defs>
-
-        <rect x="10" y="76" width="96" height="40" rx="4" fill="none" stroke="currentColor"/>
-        <text x="58" y="100" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">API</text>
-
-        <line x1="106" y1="96" x2="176" y2="96" stroke="currentColor" marker-end="url(#pc-arrow)"/>
-
-        <rect x="180" y="54" width="168" height="84" rx="4" fill="none" stroke="var(--amber)" stroke-width="1.4"/>
-        <text x="264" y="86" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11.5" fill="var(--amber)">File Redis</text>
-        <text x="264" y="103" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--amber)">clé d'idempotence</text>
-        <text x="264" y="120" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" fill="var(--amber)">priorité courtes &gt; longues</text>
-
-        <line x1="348" y1="96" x2="418" y2="96" stroke="currentColor" marker-end="url(#pc-arrow)"/>
-
-        <rect x="422" y="30" width="228" height="42" rx="4" fill="none" stroke="currentColor"/>
-        <text x="536" y="55" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">Worker BullMQ #1 → Essentia</text>
-        <rect x="422" y="80" width="228" height="42" rx="4" fill="none" stroke="currentColor"/>
-        <text x="536" y="105" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11">Worker BullMQ #2 → MuseScore</text>
-        <rect x="422" y="130" width="228" height="42" rx="4" fill="none" stroke="currentColor" opacity="0.5"/>
-        <text x="536" y="155" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" opacity="0.6">Worker BullMQ #n (concurrents)</text>
-
-        <path d="M422,51 C 390,51 390,150 190,148" fill="none" stroke="currentColor" stroke-dasharray="3,3" marker-end="url(#pc-arrow)"/>
-        <text x="300" y="172" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.7">échec → reprise en file</text>
-      </svg>
-      <figcaption>Plus de 300&nbsp;000 conversions traitées, environ 21&nbsp;000 par mois, sans perte sur échec grâce à la clé d'idempotence et à la reprise en file.</figcaption>
-    </figure>
-
-    <div class="metric-strip">
-      <div class="metric"><span class="n">300 000+</span><span class="l">conversions traitées</span></div>
-      <div class="metric"><span class="n">~21 000</span><span class="l">par mois</span></div>
-      <div class="metric"><span class="n">99,9 %</span><span class="l">uptime plateforme</span></div>
-    </div>
-
-    <div class="tags">
-      <span class="tag">Next.js</span><span class="tag">Sails.js</span><span class="tag">BullMQ / Redis</span>
-      <span class="tag">MongoDB</span><span class="tag">Python (Essentia, MuseScore)</span>
-    </div>
-  </article>
-
-  <!-- ============ OP. 4 — FREELANCE ============ -->
-  <svg class="staff" viewBox="0 0 704 30" role="presentation" aria-hidden="true">
-    <line x1="0" y1="5" x2="704" y2="5" stroke="currentColor" stroke-width="1"/>
-    <line x1="0" y1="12" x2="704" y2="12" stroke="currentColor" stroke-width="1"/>
-    <line x1="0" y1="19" x2="704" y2="19" stroke="currentColor" stroke-width="1"/>
-    <line x1="0" y1="26" x2="704" y2="26" stroke="currentColor" stroke-width="1"/>
-    <text x="704" y="21" text-anchor="end" class="opus" font-size="12">Op. 4</text>
   </svg>
 
   <article class="case">
@@ -465,8 +440,7 @@
       <span class="years mono">2025 · mission freelance</span>
     </div>
     <p class="dek">Construite en lien direct avec un designer et le client, pas à partir d'une maquette figée.</p>
-    <p class="body-text">Front React/TypeScript (MUI, Redux Toolkit) pour un client confidentiel gérant formations, événements, documents et communications. Les écrans se sont affinés en aller-retour avec le designer au fil du développement plutôt que d'être livrés d'un bloc&nbsp;: API Sails.js/MongoDB, stockage S3, notifications push, avec le client en interlocuteur direct sur les arbitrages produit.</p>
-
+    <p class="body-text">Front React/TypeScript (MUI, Redux Toolkit, React Router) pour un client confidentiel gérant formations, événements, documents et communications. Les écrans se sont affinés en aller-retour avec le designer au fil du développement plutôt que d'être livrés d'un bloc&nbsp;: API Sails.js/MongoDB, stockage S3, notifications push, avec le client en interlocuteur direct sur les arbitrages produit.</p>
     <div class="tags">
       <span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">MUI</span>
       <span class="tag">Redux Toolkit</span><span class="tag">Sails.js</span><span class="tag">MongoDB</span><span class="tag">S3</span>
@@ -481,12 +455,12 @@
   </svg>
 
   <section class="explorations">
-    <h2>Autres chantiers</h2>
-    <p class="body-text">Des sujets plus ciblés, techniques ou algorithmiques, menés en parallèle.</p>
+    <h2>Autres dépôts</h2>
+    <p class="body-text">Des projets plus ciblés, techniques ou algorithmiques, chacun dans son propre dépôt.</p>
     <div class="expl-grid">
       <div class="expl-card">
         <h3>Doigté piano assisté</h3>
-        <p>Programmation dynamique (Viterbi) avec coût ergonomique pour suggérer un doigté jouable, sans dépendance à music21.</p>
+        <p>Programmation dynamique (Viterbi) avec coût ergonomique pour suggérer un doigté jouable, TypeScript standalone, sans dépendance à music21.</p>
         <div class="tags"><span class="tag">TypeScript</span><span class="tag">DP / Viterbi</span></div>
       </div>
       <div class="expl-card">
@@ -495,9 +469,14 @@
         <div class="tags"><span class="tag">Unity</span><span class="tag">C#</span><span class="tag">MIDI</span></div>
       </div>
       <div class="expl-card">
-        <h3>Migration JS → TypeScript</h3>
-        <p>Codebase de production migrée dans son ensemble, sans interruption de service.</p>
-        <div class="tags"><span class="tag">TypeScript strict</span><span class="tag">ESLint CI</span></div>
+        <h3>Quantification de partitions</h3>
+        <p>Alignement rythmique des notes détectées sur une grille métronomique, en amont du rendu MuseScore.</p>
+        <div class="tags"><span class="tag">TypeScript</span><span class="tag">traitement du signal</span></div>
+      </div>
+      <div class="expl-card">
+        <h3>Webapp d'apprentissage du piano</h3>
+        <p>Première version du produit&nbsp;: React.js, API Node.js/Express, MongoDB. Jusqu'à +500 inscriptions par jour au pic de trafic.</p>
+        <div class="tags"><span class="tag">React.js</span><span class="tag">Express</span><span class="tag">MongoDB</span></div>
       </div>
     </div>
   </section>
