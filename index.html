@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nicolas M'Bark</title>
-<meta name="description" content="Nicolas M'Bark — développeur senior fullstack TypeScript. Plateforme SaaS front Next.js et API Node.js, extension Chrome publiée, pipeline de transcription audio, serveur MCP.">
+<meta name="description" content="Nicolas M'Bark — Senior Full-Stack Engineer & Lead technique. Plateforme SaaS front Next.js et API Node.js, pipeline de transcription audio, serveur MCP, extension Chrome publiée.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Piazzolla:ital,opsz,wght@0,8..30,400;0,8..30,500;0,8..30,600;0,8..30,700;1,8..30,500&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
@@ -91,10 +91,19 @@
     margin: 0 0 14px;
   }
   h1.name { font-size: clamp(34px, 5vw, 48px); font-weight: 600; letter-spacing: -0.01em; }
-  .role { font-size: 18px; color: var(--ink-soft); margin: 10px 0 22px; max-width: 56ch; }
+  .title-line { font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; letter-spacing: 0.02em; color: var(--pine-strong); margin: 12px 0 10px; }
+  .role { font-size: 17px; color: var(--ink-soft); margin: 0 0 22px; max-width: 58ch; }
+  .hero-metrics { display: flex; flex-wrap: wrap; gap: 14px 34px; margin: 0 0 24px; padding-top: 18px; border-top: 1px solid var(--rule); }
   .contact-row { display: flex; flex-wrap: wrap; gap: 8px 18px; font-family: 'IBM Plex Mono', monospace; font-size: 13.5px; }
   .contact-row a { color: var(--ink-soft); }
   .contact-row a:hover { color: var(--amber); }
+
+  /* ---------- problem / decision / result ---------- */
+  .pdr { display: grid; grid-template-columns: 82px 1fr; gap: 7px 14px; margin: 14px 0 8px; max-width: 64ch; }
+  .pdr dt { font-family: 'IBM Plex Mono', monospace; font-size: 10.5px; text-transform: uppercase; letter-spacing: 0.06em; color: var(--pine); padding-top: 3px; }
+  .pdr dd { margin: 0; color: var(--ink-soft); font-size: 14.5px; }
+  .pdr + .body-text.trailing { font-size: 13.5px; margin-top: 6px; }
+  @media (max-width: 560px) { .pdr { grid-template-columns: 1fr; gap: 2px 0; } .pdr dt { padding-top: 8px; } }
 
   /* ---------- staff divider ---------- */
   .staff { display: block; width: 100%; height: auto; margin: 52px 0 40px; color: var(--rule-strong); }
@@ -211,7 +220,14 @@
   <header class="hero">
     <p class="eyebrow">Portfolio &middot; sept. 2026</p>
     <h1 class="name">Nicolas M'Bark</h1>
-    <p class="role">Développeur senior fullstack TypeScript &mdash; sept ans à concevoir, développer et exploiter une plateforme SaaS de bout en bout, front Next.js, API Node.js et infrastructure, en autonomie et en binôme avec un profil design/UX.</p>
+    <p class="title-line">Senior Full-Stack Engineer &middot; Lead technique &middot; SaaS &amp; IA</p>
+    <p class="role">Sept ans à construire et exploiter une plateforme SaaS en production, du navigateur aux workers jusqu'à l'infrastructure, en binôme avec un profil design/UX.</p>
+    <div class="hero-metrics">
+      <div class="metric"><span class="n">300 000+</span><span class="l">conversions traitées</span></div>
+      <div class="metric"><span class="n">6</span><span class="l">applications en production</span></div>
+      <div class="metric"><span class="n">99,9 %</span><span class="l">uptime</span></div>
+      <div class="metric"><span class="n">~1 450</span><span class="l">cas de test automatisés</span></div>
+    </div>
     <div class="contact-row">
       <a href="mailto:mbark.nicolas@gmail.com">mbark.nicolas@gmail.com</a>
       <a href="https://github.com/Tollaris95">github.com/Tollaris95</a>
@@ -227,7 +243,7 @@
       <line x1="0" y1="19" x2="704" y2="19" stroke="currentColor" stroke-width="1"/>
       <line x1="0" y1="26" x2="704" y2="26" stroke="currentColor" stroke-width="1"/>
     </svg>
-    <p>Ci-dessous, le logiciel que je fais tourner en production. D'abord la plateforme La Touche Musicale dans son ensemble, son front, son API, ses traitements et son exploitation, puis les briques et chantiers plus ciblés autour. Chaque bloc décrit ce que le code fait, pas seulement les technologies employées.</p>
+    <p>Ci-dessous, le logiciel que je fais tourner en production. D'abord la plateforme La Touche Musicale dans son ensemble, son front, son API, ses traitements et son exploitation, puis les briques et chantiers plus ciblés autour. Chaque bloc décrit ce que le code fait, pas seulement les technologies employées. L'essentiel du code vit sur une codebase privée&nbsp;; les dépôts publics présentés ici sont les pièces autonomes.</p>
   </section>
 
   <section class="exp">
@@ -270,30 +286,45 @@
       <span class="years mono">2019 – présent</span>
     </div>
     <p class="dek">Un SaaS d'apprentissage du piano et de transcription audio, du front à l'API jusqu'à l'infra, que je porte depuis la première ligne de code.</p>
-    <p class="body-text">Six applications en production autour d'un même produit&nbsp;: la webapp d'apprentissage, l'application mobile, deux plateformes de transcription audio par IA, un serveur MCP. Je conçois les fonctionnalités en binôme avec un profil design/UX, je les développe des deux côtés de la stack, et j'exploite l'ensemble.</p>
+    <p class="body-text">Six applications en production autour d'un même produit&nbsp;: la webapp d'apprentissage, l'application mobile, deux plateformes de transcription audio par IA (PianoConvert, GalaxyConvert), un serveur MCP et l'extension Chrome. Je conçois les fonctionnalités en binôme avec un profil design/UX, je les développe des deux côtés de la stack, et j'exploite l'ensemble.</p>
 
     <div class="metric-strip">
-      <div class="metric"><span class="n">6</span><span class="l">applis en production</span></div>
       <div class="metric"><span class="n">7 ans</span><span class="l">en exploitation continue</span></div>
-      <div class="metric"><span class="n">99,9 %</span><span class="l">uptime</span></div>
+      <div class="metric"><span class="n">~21 000</span><span class="l">conversions / mois</span></div>
+      <div class="metric"><span class="n">9</span><span class="l">langues (i18n)</span></div>
     </div>
 
     <h3>Front web &mdash; Next.js / React</h3>
-    <p class="body-text">Application Next.js (App Router) pour l'apprentissage du piano&nbsp;: rendu de partition et clavier interactif, jeu de progression, catalogue de morceaux éditorialisable depuis un back-office admin, conversion PianoConvert intégrée directement dans le navigateur, tunnel d'abonnement Stripe. État géré avec Redux Toolkit et TanStack Query, composants MUI, textes multilingues pilotés par un CMS, écrans intégrés à partir de maquettes Figma.</p>
+    <dl class="pdr">
+      <dt>Problème</dt>
+      <dd>L'état serveur et l'état d'interface avaient tendance à diverger, et chaque évolution éditoriale du catalogue de morceaux imposait un déploiement.</dd>
+      <dt>Décision</dt>
+      <dd>Séparation stricte entre état serveur (TanStack Query) et état applicatif (Redux Toolkit)&nbsp;; catalogue sorti du code vers un modèle éditable en back-office admin, avec repli sur les valeurs par défaut tant que rien n'est configuré.</dd>
+      <dt>Résultat</dt>
+      <dd>Le cache et l'UI restent cohérents, et l'équipe éditorialise le catalogue sans livrer de code.</dd>
+    </dl>
+    <p class="body-text trailing">Webapp d'apprentissage&nbsp;: partition et clavier interactifs, jeu de progression, PianoConvert dans le navigateur, tunnel d'abonnement Stripe. App Router, MUI, textes multilingues pilotés par un CMS, écrans intégrés depuis Figma.</p>
     <div class="tags">
       <span class="tag">Next.js 16</span><span class="tag">React 19</span><span class="tag">TypeScript strict</span>
       <span class="tag">Redux Toolkit</span><span class="tag">TanStack Query</span><span class="tag">MUI</span><span class="tag">i18n via CMS</span>
     </div>
 
     <h3>API &mdash; Sails.js / MongoDB</h3>
-    <p class="body-text">API REST Sails.js sur MongoDB&nbsp;: modélisation, indexation et agrégations, authentification OAuth2/OIDC via Keycloak avec un secret JWT propre à ce backend, tâches de fond BullMQ/Redis, webhooks Stripe, stockage S3. Environ 1&nbsp;450 cas de test sur l'API et le front (Jest, Supertest, Testing Library)&nbsp;; lint et audit de dépendances bloquants avant tout déploiement.</p>
+    <dl class="pdr">
+      <dt>Problème</dt>
+      <dd>Une même API sert plusieurs clients (web, mobile, extension), avec de l'authentification à mutualiser et des webhooks de paiement à fiabiliser.</dd>
+      <dt>Décision</dt>
+      <dd>REST Sails.js sur MongoDB (modélisation, indexation, agrégations), authentification OAuth2/OIDC via Keycloak avec un secret JWT propre à ce backend, webhooks Stripe idempotents, tâches de fond BullMQ/Redis.</dd>
+      <dt>Résultat</dt>
+      <dd>Un point d'entrée unique et sécurisé pour tous les clients&nbsp;; environ 1&nbsp;450 cas de test API et front, CI bloquante sur le lint et l'audit de dépendances.</dd>
+    </dl>
     <div class="tags">
       <span class="tag">Sails.js</span><span class="tag">Node.js &ge; 24</span><span class="tag">MongoDB / Mongoose</span>
       <span class="tag">OAuth2 / OIDC &middot; Keycloak</span><span class="tag">BullMQ / Redis</span><span class="tag">Stripe webhooks</span><span class="tag">Jest &middot; Supertest</span>
     </div>
 
     <h3>Pipeline de transcription audio &rarr; partition</h3>
-    <p class="body-text">Le traitement audio (Essentia, MuseScore) est trop lourd pour vivre dans le cycle requête/réponse de l'API. Je l'ai sorti vers des workers BullMQ/Redis concurrents, avec une clé d'idempotence par conversion pour ne jamais traiter deux fois le même fichier, des transitions d'état conditionnelles, et une file priorisée qui laisse les conversions courtes doubler les longues.</p>
+    <p class="body-text">Le traitement audio (Essentia, MuseScore) est trop lourd pour vivre dans le cycle requête/réponse de l'API. Je l'ai sorti vers des workers BullMQ/Redis concurrents, avec une clé d'idempotence par conversion pour éviter de retraiter le même fichier, des transitions d'état conditionnelles, et une file priorisée qui laisse les conversions courtes doubler les longues.</p>
 
     <figure class="diagram">
       <svg viewBox="0 0 660 190" fill="currentColor" role="img" aria-label="Une requête de conversion passe de l'API à une file d'attente Redis avec clé d'idempotence, puis à des workers BullMQ concurrents qui appellent les modules Python Essentia et MuseScore. En cas d'échec, la tâche revient dans la file pour une reprise plutôt que d'être perdue.">
@@ -319,7 +350,7 @@
         <path d="M422,51 C 390,51 390,150 190,148" fill="none" stroke="currentColor" stroke-dasharray="3,3" marker-end="url(#pc-arrow)"/>
         <text x="300" y="172" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="10" opacity="0.7">échec &rarr; reprise en file</text>
       </svg>
-      <figcaption>Plus de 300&nbsp;000 conversions traitées, environ 21&nbsp;000 par mois, sans perte sur échec grâce à la clé d'idempotence et à la reprise en file.</figcaption>
+      <figcaption>Plus de 300&nbsp;000 conversions traitées, environ 21&nbsp;000 par mois. La clé d'idempotence et la reprise en file permettent de rejouer une tâche échouée sans la retraiter.</figcaption>
     </figure>
 
     <h3>Exposer la plateforme à des agents IA</h3>
@@ -357,14 +388,14 @@
           <text x="560" y="194" text-anchor="middle">BigQuery &middot; scope</text>
         </g>
       </svg>
-      <figcaption>Le jeton porte le scope&nbsp;; le serveur vérifie chaque appel avant d'atteindre un système connecté. Une requête hors scope n'accède à rien.</figcaption>
+      <figcaption>Le jeton porte le scope&nbsp;; le serveur vérifie chaque appel avant d'atteindre un système connecté. Une requête hors scope est rejetée à ce niveau.</figcaption>
     </figure>
     <div class="tags">
       <span class="tag">Model Context Protocol</span><span class="tag">JWT / JWKS</span><span class="tag">RBAC</span><span class="tag">BigQuery</span>
     </div>
 
     <h3>Exploitation</h3>
-    <p class="body-text">Scaleway bare-metal, Docker, PM2 en cluster, Nginx, CI/CD Azure DevOps. 99,9&nbsp;% d'uptime, déploiements zéro-downtime, et migration de l'ensemble de la codebase de JavaScript vers TypeScript sans interruption de service.</p>
+    <p class="body-text">Scaleway bare-metal, Docker, PM2 en cluster, Nginx, CI/CD Azure DevOps. 99,9&nbsp;% d'uptime, déploiements sans coupure, et migration complète de la codebase JavaScript vers TypeScript menée sans interruption de service.</p>
     <div class="tags">
       <span class="tag">Scaleway bare-metal</span><span class="tag">Docker</span><span class="tag">PM2 cluster</span><span class="tag">Nginx</span><span class="tag">Azure DevOps CI/CD</span>
     </div>
@@ -495,7 +526,7 @@
       <dt>Back-end</dt><dd>Node.js ≥ 24 · Express · Sails.js · BullMQ/Redis · Zod · OAuth2/OIDC</dd>
       <dt>Données</dt><dd>MongoDB Atlas / Mongoose · Redis · BigQuery</dd>
       <dt>DevOps &amp; cloud</dt><dd>AWS (Lambda, S3, SNS) · Docker · PM2 · Nginx · Azure DevOps</dd>
-      <dt>IA agentique</dt><dd>Model Context Protocol · Claude Code au quotidien</dd>
+      <dt>IA agentique</dt><dd>Model Context Protocol · design d'outils et de scopes OAuth · développement assisté par agents au quotidien</dd>
     </dl>
   </section>
 
